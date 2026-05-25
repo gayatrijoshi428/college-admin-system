@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>College Academic Management System • Admin Login</title>
+
+  <link rel="stylesheet" href="./admin.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <meta name="theme-color" content="#071426" />
+</head>
+
+<body>
+
+  <div class="bg"></div>
+
+  <main class="shell">
+
+    <section class="card" aria-label="Admin login">
+
+      <header class="top">
+
+        <div class="brand">
+
+          <span class="logo">◆</span>
+
+          <div>
+            <h1>CAM System</h1>
+            <p>College Academic Management System • Admin</p>
+          </div>
+
+        </div>
+
+        <div class="badge" id="timeBadge">
+          <span class="dot"></span>
+          <span>Loading time…</span>
+        </div>
+
+      </header>
+
+      <form class="form" id="adminForm" autocomplete="off" novalidate>
+
+        <!-- USERNAME -->
+
+        <div class="field">
+
+          <label for="username">Username</label>
+
+          <div class="inputWrap">
+
+            <span class="icon">@</span>
+
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Enter your username"
+              required
+              minlength="3"
+            />
+
+          </div>
+
+          <div class="hint" id="uHint"></div>
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="field">
+
+          <label for="password">Password</label>
+
+          <div class="inputWrap">
+
+            <span class="icon">⦿</span>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter password"
+              required
+              minlength="6"
+            />
+
+            <button
+              class="ghostBtn"
+              type="button"
+              id="togglePwd">
+              Show
+            </button>
+
+          </div>
+
+          <div class="hint" id="pHint"></div>
+
+        </div>
+
+        <!-- CAPTCHA -->
+
+        <div class="captchaRow">
+
+          <div class="captchaBox">
+
+            <div class="captchaLabel">Captcha</div>
+
+            <canvas
+              id="captchaCanvas"
+              width="220"
+              height="62">
+            </canvas>
+
+            <div class="captchaActions">
+
+              <button
+                type="button"
+                class="tinyBtn"
+                id="refreshCaptcha">
+                ↻ Refresh
+              </button>
+
+              <button
+                type="button"
+                class="tinyBtn"
+                id="speakCaptcha">
+                🔊 Speak
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="field captchaInput">
+
+            <label for="captchaInput">
+              Enter captcha
+            </label>
+
+            <div class="inputWrap">
+
+              <span class="icon">#</span>
+
+              <input
+                id="captchaInput"
+                name="captcha"
+                type="text"
+                placeholder="Type the captcha"
+                required
+              />
+
+            </div>
+
+            <div class="hint" id="cHint"></div>
+
+          </div>
+
+        </div>
+
+        <!-- REMEMBER -->
+
+        <div class="row">
+
+          <label class="remember">
+
+            <input id="rememberMe" type="checkbox" />
+
+            <span>Remember device</span>
+
+          </label>
+
+          <a href="#" class="link" id="forgotLink">
+            Forgot password?
+          </a>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button class="primary" type="submit">
+
+          <span class="spark"></span>
+
+          Login as Admin
+
+        </button>
+
+        <div class="status" id="status"></div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="./admin.js"></script>
+
+</body>
+</html>
